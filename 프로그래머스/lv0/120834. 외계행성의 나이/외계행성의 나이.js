@@ -1,10 +1,11 @@
+
 function solution(age) {
-    let answer = []
-    let english = ['a','b','c','d','e','f','g','h','i','j']
-    let str = age.toString().split("")
-    let num = str.map(Number)
-    for (let i=0; i<num.length; i++) {
-        answer.push(english[num[i]])
+    var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
+    var answer = "";
+    age = age.toString();
+
+    for(let i=0; i<age.length; i++){
+        answer += alphabet[age[i]];
     }
-    return answer.join('')
-} 
+    return answer;
+}
