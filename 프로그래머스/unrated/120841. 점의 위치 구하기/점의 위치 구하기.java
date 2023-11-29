@@ -1,18 +1,14 @@
 class Solution {
     public int solution(int[] dot) {
         
-        if (dot[0] >= 0 && dot[1] >= 0) {
-            return 1;
-        }
-        else if (dot[0] < 0 && dot[1] >= 0){
-            return 2;
-        }
-        else if (dot[0] < 0 && dot[1] < 0){
-            return 3;
-        }
-        else {
-            return 4;
-        }
+        int answer = 0;
+        if(dot[0] > 0) 
+            if(dot[1] > 0) answer = 1;
+            else answer = 4;
+        else 
+            if(dot[1] > 0) answer = 2;
+            else answer = 3;
     
+        return answer;
     }
 }
