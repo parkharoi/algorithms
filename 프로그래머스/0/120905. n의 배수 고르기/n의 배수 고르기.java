@@ -3,9 +3,9 @@ import java.util.ArrayList;
 class Solution {
     public int[] solution(int n, int[] numlist) {
         ArrayList<Integer> bae = new ArrayList<>();
-        for (int i = 0; i < numlist.length; i++) {
-            if (numlist[i] % n == 0) 
-                bae.add(numlist[i]);
+        for (int num : numlist) {
+            if (num % n == 0) 
+                bae.add(num);
         }
         
         int[] result = new int[bae.size()];
