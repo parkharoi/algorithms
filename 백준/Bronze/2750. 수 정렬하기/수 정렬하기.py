@@ -1,13 +1,10 @@
-N = int(input())
-numbers = []
+x = int(input())
+n = []
 
-for _ in range(N) :
-    number = int(input())
-    numbers.append(number)
+for _ in range(x):
+    num = int(input())
+    n.append(num)
 
-numbers = list(set(numbers))
+for num in sorted(set(n)):
+    print(num)
 
-numbers.sort()
-
-for number in numbers :
-    print(number)
