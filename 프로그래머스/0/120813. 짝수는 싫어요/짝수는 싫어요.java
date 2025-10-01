@@ -1,14 +1,12 @@
 class Solution {
     public int[] solution(int n) {
-        int count = (n+1)/2;
-        int[] answer = new int[count];
-        int index = 0 ;
-        for (int i = 0; i <= n; i++) {
-            if(i % 2 != 0) {
-                answer[index]=i;
-                index++;
-            }
+        int[] result = new int[(n+1)/2];
+        int i = 0;
+        for (int j = 1; j <= n; j+=2) {
+            result[i] = j;
+            i+=1;
+            
         }
-        return answer;
+        return result;
     }
 }
