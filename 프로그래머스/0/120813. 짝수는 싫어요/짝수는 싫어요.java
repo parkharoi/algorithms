@@ -1,12 +1,10 @@
+import java.util.stream.IntStream;
+
+
 class Solution {
     public int[] solution(int n) {
-        int[] result = new int[(n+1)/2];
-        int i = 0;
-        for (int j = 1; j <= n; j+=2) {
-            result[i] = j;
-            i+=1;
-            
-        }
-        return result;
+        return IntStream.rangeClosed(1,n)
+            .filter(i -> i%2 ==1)
+            .toArray();
     }
 }
