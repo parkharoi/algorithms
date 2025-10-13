@@ -1,13 +1,16 @@
 class Solution {
     public int solution(int n) {
-        int answer = 1;
-        int cnt= 6;
+        int i = 6;
+        int answer = 0;
+        
         while(true) {
-            if(cnt % n ==0) {
+            if (i % n == 0) {
+                answer += 1;
                 break;
+            } else {
+                i += 6;
+                answer += 1;
             }
-            cnt +=6;
-            answer +=1;
         }
         return answer;
     }
