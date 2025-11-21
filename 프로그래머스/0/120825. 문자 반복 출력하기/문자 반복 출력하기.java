@@ -1,13 +1,13 @@
 class Solution {
     public String solution(String my_string, int n) {
-        String answer = "";
+        StringBuilder answerBuilder = new StringBuilder();
+        char [] chars = my_string.toCharArray();
         
-        for(int j = 0; j <= my_string.length()-1; j++){
-              for (int i = 1; i<= n; i++) {
-                answer +=  my_string.charAt(j);
+        for (char c : chars) {
+            for (int i = 0; i < n; i++) {
+                 answerBuilder.append(c);
             }
         }
-
-        return answer;
+        return answerBuilder.toString();
     }
 }
